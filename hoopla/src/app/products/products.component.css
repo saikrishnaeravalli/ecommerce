@@ -1,0 +1,34 @@
+.fill{
+    
+    flex: 1 1 auto;
+  }
+
+.fill1{
+    margin-left: 20px;
+  }
+  .strikethrough{
+      text-decoration: line-through;
+  }
+
+  .fill2{
+      margin-left: -50px;
+  }
+  .fill3{
+    font-size: 22px;
+  }
+  .top{
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+.badge{
+  background-color: rgb(136, 198, 219);
+  height: 20px;
+}
+.nav{
+  background-color:rgb(20, 16, 16) ;
+  color: white;
+}
+.sty{
+  background-color: whitesmoke;
+  height: 90%;
+}

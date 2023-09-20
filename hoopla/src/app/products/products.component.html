@@ -1,0 +1,52 @@
+<mat-toolbar class="nav">
+    <mat-icon   [routerLink]='["/dashboard"]'>home</mat-icon>
+    <span [routerLink]='["/dashboard"]'>Home</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill"></span>
+    <div>welcome {{sesuser}}</div>
+    <button mat-button  [routerLink]='["/vieworders"]'><h4>View orders</h4></button>
+    <button mat-button (click)="logof()">
+      <h4>Logout</h4>
+    </button>
+  </mat-toolbar>
+
+  <body class="sty">
+
+    <div class="row container-fluid" style="background-color: whitesmoke;" ><br>
+      <div class="col-md-4 ">
+            <mat-card>
+                <img mat-card-image src='../../assets/{{productdetails["image"]}}' alt="" width="300px" height="480px">
+            </mat-card>
+            <div *ngIf="isavailable;else failure">
+            <button mat-raised-button color="primary" class="top" (click)="buy()"><h4>Buy Now</h4></button>
+           </div>
+           <ng-template #failure>
+            <button mat-raised-button class="top" (click)="dialog()" color="primary" >Notify me</button>
+          </ng-template>
+    </div>
+    <div class="col-md-6">
+        <div>{{productdetails.pCategory}}</div>
+        <div ><h2>{{productdetails.pName}}</h2></div>
+        <div *ngIf="isavailable;else failuremessage">
+            <div>Save {{((productdetails.price)*(productdetails.pSeller["pDiscount"]))|currency:'INR'}}</div>
+            <strong class="fill3">{{((productdetails.price)-((productdetails.price)*(productdetails.pSeller["pDiscount"])))|currency:'INR'}}</strong>
+            <span class="fill1 strikethrough ">{{(productdetails.price)|currency:'INR'}}</span>
+            <span class="fill1 text-success">{{(productdetails.pSeller["pDiscount"])|percent}} off</span>
+            <br><br><br>
+            <div ><strong> Rating:<span class="badge"> {{productdetails.pRating}} <mat-icon class="badge">star</mat-icon> </span> </strong> </div> <br>
+            <div><h5>{{productdetails.pSeller["s_Id"]}}</h5></div>
+            <br>
+            <div><h6>Delivery charges applicable*</h6></div>
+            <div><h6>Rs.{{productdetails.pSeller["pShippingCharges"]}}</h6></div>
+            <br>
+            <div><h5>Description</h5></div>
+            <div>{{productdetails.pDescription}}</div>
+        </div>
+        <ng-template #failuremessage>
+          <br><br><br><br><h3>Coming Soon
+             </h3>
+        </ng-template>
+    </div>
+  </div>
+  </body>  

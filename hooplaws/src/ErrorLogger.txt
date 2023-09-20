@@ -1,0 +1,808 @@
+Tue Apr 14 2020 23:43:18 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:43:53 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:44:24 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:47:11 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:53:00 GMT+0530 (India Standard Time) - TypeError: db.getProductsDetails.then is not a function
+    at Object.OnlineShopping.getAllProductsDetails (C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:19:35)
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:22:16
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+Tue Apr 14 2020 23:53:41 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:58:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:54:39 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Tue Apr 14 2020 23:56:34 GMT+0530 (India Standard Time) - TypeError: create.setupDb is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:8:12
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Wed Apr 15 2020 00:02:05 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:02:19 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:04:22 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:06:29 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:07:03 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:08:13 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:09:07 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:12:02 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:12:16 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:16:07 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:24:22 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:25:00 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:28:23 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:47:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:32:31 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:50:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:38:52 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:48:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:39:36 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:49:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:42:28 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:48:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:46:21 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:48:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:48:43 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:49:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:49:07 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:49:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 00:49:25 GMT+0530 (India Standard Time) - Error: Could not connect to Database
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\connection.js:49:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:35:39 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:22:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:36:33 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:22:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:41:16 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:22:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:41:55 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:42:32 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:43:03 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:43:26 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:45:09 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:45:29 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:46:40 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:47:47 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:10:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:48:16 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:49:33 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:51:03 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:52:34 GMT+0530 (India Standard Time) - ReferenceError: custdts is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:23:20
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:54:33 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:55:54 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:58:43 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 19:59:13 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 20:00:03 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:11:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 20:04:01 GMT+0530 (India Standard Time) - TypeError: Cannot read property 'length' of null
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:12:39
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 20:04:32 GMT+0530 (India Standard Time) - Error: No userdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:11:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Wed Apr 15 2020 20:05:38 GMT+0530 (India Standard Time) - Error: No userdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:12:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Apr 16 2020 15:42:20 GMT+0530 (India Standard Time) - ReferenceError: category is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:38:38
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Thu Apr 16 2020 15:44:18 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:24:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 00:16:31 GMT+0530 (India Standard Time) - ReferenceError: orderid is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:46:38
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 09:32:21 GMT+0530 (India Standard Time) - ReferenceError: prodid is not defined
+    at Object.OnlineShopdb.buying (C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:47:17)
+    at Object.OnlineShopping.buys (C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:49:16)
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:46:16
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+Fri Apr 17 2020 09:35:13 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:52:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:35:55 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:52:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:37:08 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:52:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:37:59 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:52:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:38:57 GMT+0530 (India Standard Time) - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:56:94
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:39:45 GMT+0530 (India Standard Time) - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:57:94
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:40:30 GMT+0530 (India Standard Time) - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:58:94
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 09:41:04 GMT+0530 (India Standard Time) - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\model\user.js:58:94
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 11:32:54 GMT+0530 (India Standard Time) - TypeError: Shoppingserv.views is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:53:16
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 11:35:52 GMT+0530 (India Standard Time) - TypeError: Shoppingserv.views is not a function
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:53:16
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 13:00:22 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:00:44 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:01:09 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:02:02 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:14:25 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:52:57 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:32:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 13:53:30 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:32:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Fri Apr 17 2020 21:48:20 GMT+0530 (India Standard Time) - ReferenceError: username is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:55:17
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+Fri Apr 17 2020 21:49:30 GMT+0530 (India Standard Time) - ReferenceError: username is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:55:17
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+Fri Apr 17 2020 22:03:22 GMT+0530 (India Standard Time) - ReferenceError: username is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:56:22
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+Fri Apr 17 2020 22:18:17 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:24:21 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:31:08 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:31:14 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:31:28 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:32:31 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:33:02 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:34:36 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:35:05 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:35:46 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:38:47 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Fri Apr 17 2020 22:38:48 GMT+0530 (India Standard Time) - ReferenceError: name is not defined
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\routes\routing.js:54:23
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sai krishna\Desktop\exp\myapp\node_modules\express\lib\router\index.js:275:10)
+    at requestLogger (C:\Users\sai krishna\Desktop\exp\myapp\src\utilities\requestlogger.js:8:5)
+Sun Apr 19 2020 12:05:20 GMT+0530 (India Standard Time) - Error: No Productdetails found
+    at C:\Users\sai krishna\Desktop\exp\myapp\src\service\user.js:57:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Thu Apr 21 2022 13:31:45 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 13:33:21 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 13:33:21 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:23 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:23 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:24 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:24 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:24 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:32:26 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:27 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:27 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:28 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:28 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:28 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:28 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:28 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:29 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:29 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:36:30 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:39:42 GMT-0700 (Mountain Standard Time) - ReferenceError: print is not defined
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/routes/routing.js:18:5
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:317:13)
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/requestlogger.js:8:5)
+Thu Apr 21 2022 14:39:42 GMT-0700 (Mountain Standard Time) - ReferenceError: print is not defined
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/routes/routing.js:18:5
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:317:13)
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/saikrishna/Desktop/fa4/project/hooplaws/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/requestlogger.js:8:5)
+Thu Apr 21 2022 14:40:32 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Thu Apr 21 2022 14:40:32 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sat Apr 08 2023 22:29:48 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:05:25 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:09:01 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:11:04 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:11:10 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:11:12 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:11:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 00:11:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:11:45 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:11:49 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:13:52 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:13:53 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:14:30 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:23:33 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:31:06 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:41:16 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:41:33 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:41:33 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:42:04 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:42:09 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:42:14 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:42:21 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at listOnTimeout (node:internal/timers:526:9)
+    at processTimers (node:internal/timers:500:7)
+Sun Apr 09 2023 13:42:21 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:43:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:47:15 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:48:01 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 13:48:03 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 14:04:56 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+Sun Apr 09 2023 15:21:17 GMT-0700 (Mountain Standard Time) - Error: No Productdetails found
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/service/user.js:19:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:23:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:23:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:23:13 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:54:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:23:38 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:23:39 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:24:15 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:24:15 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:25:49 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sun Apr 09 2023 18:25:49 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Tue Sep 19 2023 22:49:27 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
+    at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19

@@ -1,0 +1,16 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "object-literal-sort-keys":false,
+    "only-arrow-functions": true,
+			"curly": [true, "ignore-same-line"],
+			"no-empty": true,
+			"no-empty-interface": true,
+			"no-var-keyword": true,
+			"triple-equals": true,
+			"no-console": [true, "log", "error"]
+  },
+  "rulesDirectory": [
+    "codelyzer"
+  ]
+}

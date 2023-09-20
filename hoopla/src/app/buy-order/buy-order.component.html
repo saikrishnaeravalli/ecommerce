@@ -1,0 +1,30 @@
+<mat-toolbar class="nav" >
+    <mat-icon   [routerLink]='["/dashboard"]'>home</mat-icon>
+    <span [routerLink]='["/dashboard"]'>Home</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill"></span>
+    <div>welcome {{sesuser}}</div>
+    <button mat-button class="fill1" [routerLink]='["/vieworders"]'><h4>View orders</h4></button>
+    <button mat-button class="fill1" (click)="logof()"><h4>Logout</h4></button>
+  </mat-toolbar>
+
+<div class="sty">
+      <div class="row container-fluid">
+        <div class="col-md-4 offset-4"><br><br>
+            <mat-card>
+                <mat-card-title>
+                   <h5 class="text-center">Thank you for shopping with us</h5>
+                   <h5 class="text-center">Your Order has been Successfully Placed</h5>
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="text-center">Product with {{productid}} has been ordered</div>   
+                    <div class="text-center">{{productdetails.pSeller["SId"]}}</div>
+                    <div class="text-center text-success">Congratulations!!You saved {{(productdetails.price)*(productdetails.pSeller.pDiscount)|currency:'INR'}}</div><br>
+                    <button mat-flat-button class="fill1" color="primary"(click)="details()">Continue Shopping</button>
+                    <button mat-flat-button color="primary"class="fill2" (click)="ord(productid)">View Order</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+  </div>
+</div>  
