@@ -1,0 +1,24 @@
+/* Styles for the filter form container */
+.filter-form-container {
+    width: 100%;
+    margin: 16px; /* Add margin for spacing */
+    display: flex;
+    justify-content: flex-end; /* Align the form field to the right */
+}
+
+/* Styles for the filter form field */
+.mat-form-field {
+    width: 100%;
+}
+
+
+/* Styles for the product table */
+.product-table {
+    width: 100%;
+}
+
+.edit-mode {
+    border-bottom: 1px solid #000; /* Add the underline style here */
+}
+
+

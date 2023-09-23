@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
     exports: [
@@ -25,7 +27,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
         MatRadioModule,
         MatListModule,
         MatSidenavModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatTableModule
     ]
 })
 export class MaterialModule { }
