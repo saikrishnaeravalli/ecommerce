@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService } from "./helpers/auth.service";
 
 @Component({
   selector: "app-root",
@@ -6,22 +8,30 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
- public title = "hoopla";
+  constructor(private router: Router, private authService: AuthService) { }
 
- vaiable_name ="HOME PAGE"
+  ngOnInit() { }
 
- some(parameter){
-  if (parameter == "home"){
-    this.vaiable_name = "HOME PAGE"
+  // Check if a token exists in local storage using AuthService
+  isTokenInLocalStorage(): boolean {
+    return this.authService.isAuthenticated();
   }
-  else if (parameter == "news"){
-    this.vaiable_name = "NEWS PAGE"
+
+  // Check if the current route is the /login page
+  isOnLoginPage(): boolean {
+    return this.router.url === '/login';
   }
-  else if (parameter == "contact"){
-    this.vaiable_name = "CONTACT PAGE"
-  }else if (parameter == "about"){
-    this.vaiable_name = "ABOUT PAGE"
+
+  // Check if the current route is the /register page
+  isOnRegisterPage(): boolean {
+    return this.router.url === '/register';
   }
-}
- 
+
+  // Implement logout logic using AuthService
+  signOff(): void {
+    // Call the logout method from AuthService
+    this.authService.logout();
+
+    // You can also add redirection logic if needed
+  }
 }

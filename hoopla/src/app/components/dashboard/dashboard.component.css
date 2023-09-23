@@ -1,0 +1,29 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 15%;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16);
+}
+
+.sidenav button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidenav button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidenav button:last-child {
+  border-bottom: none; /* Remove the border from the last button */
+}

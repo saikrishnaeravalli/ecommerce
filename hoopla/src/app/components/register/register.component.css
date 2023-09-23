@@ -1,0 +1,36 @@
+/* Add this to your component's CSS file */
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Set a minimum width of 50% of the screen */
+  mat-card {
+    min-width: 50%;
+    max-width: 80%; /* Optionally, set a maximum width to prevent it from becoming too wide on larger screens */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  /* Add this to your component's CSS/SCSS file */
+.message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+mat-icon {
+  margin-right: 8px; /* Adjust the spacing between icon and text as needed */
+}
+
+mat-radio-button {
+  margin-right: 20px;
+}

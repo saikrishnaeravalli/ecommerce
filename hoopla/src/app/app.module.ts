@@ -1,28 +1,22 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-
 import {HttpClientModule} from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
-import {MatButtonModule} from "@angular/material/button";
-import {MatCardModule} from "@angular/material/card";
-import {MatIconModule} from "@angular/material/icon";
-import {MatInputModule} from "@angular/material/input";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
-import {MatToolbarModule} from "@angular/material/toolbar";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { BuyOrderComponent } from "./buy-order/buy-order.component";
-import { BuyService } from "./buy-order/buy.service";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { DashboardserviceService } from "./dashboard/dashboardservice.service";
-import { LoginComponent } from "./login/login.component";
-import { LoginserviceService } from "./login/loginservice.service";
-import { ProductsComponent } from "./products/products.component";
-import { ProductserviceService } from "./products/productservice.service";
-import { ViewService } from "./vieworders/view.service";
-import { ViewordersComponent } from "./vieworders/vieworders.component";
-import {MatSelectModule} from '@angular/material/select';
+import { BuyOrderComponent } from "./components/buy-order/buy-order.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { LoginComponent } from "./components/login/login.component";
+import { ProductsComponent } from "./components/products/products.component";
+import { ViewordersComponent } from "./components/vieworders/vieworders.component";
+import { RegisterComponent } from './components/register/register.component';
+import { MaterialModule } from "./helpers/material.module";
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
+import { SellerOrdersComponent } from './components/seller-orders/seller-orders.component';
+import { SafeUrlPipe } from "./helpers/safeUrl.pipe";
 
 @NgModule({
   declarations: [
@@ -32,22 +26,22 @@ import {MatSelectModule} from '@angular/material/select';
     ProductsComponent,
     BuyOrderComponent,
     ViewordersComponent,
+    RegisterComponent,
+    ProductListComponent,
+    AddProductComponent,
+    InventoryComponent,
+    SellerOrdersComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatSnackBarModule,
-    MatIconModule,
-    MatSelectModule
+    MaterialModule,
   ],
-  providers: [LoginserviceService, DashboardserviceService, ProductserviceService, BuyService, ViewService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

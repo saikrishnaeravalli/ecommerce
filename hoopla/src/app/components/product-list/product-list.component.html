@@ -1,0 +1,27 @@
+<div class="card-container">
+    <mat-card *ngFor="let product of products" class="product-card">
+        <!-- Display the image on top of the card -->
+        <div class="product-image">
+            <img *ngIf="productImages[product._id]" [src]="productImages[product._id]" alt="Product image">
+        </div>
+        <mat-card-content>
+            <!-- Center the product name -->
+            <!-- <h3 class="product-name">{{ product.name }}</h3> -->
+            <mat-card-title class="text-center">{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>{{ product.description }}</mat-card-subtitle>
+            <h5>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</h5>
+        </mat-card-content>
+        <mat-card-actions>
+            <ng-container *ngIf="userType === 'S'">
+                <!-- Use flat buttons -->
+                <button mat-flat-button color="primary" (click)="editProduct(product)">Edit</button>
+                <button mat-flat-button color="warn" (click)="deleteProduct(product._id)">Delete</button>
+            </ng-container>
+            <ng-container *ngIf="userType === 'C'">
+                <!-- Use flat buttons -->
+                <button mat-flat-button color="primary" (click)="addToCart(product)">Add to Cart</button>
+                <button mat-flat-button color="accent" (click)="buyNow(product)">Buy Now</button>
+            </ng-container>
+        </mat-card-actions>
+    </mat-card>
+</div>
