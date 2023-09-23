@@ -1,0 +1,77 @@
+<div class="center-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <mat-form-field class="full-width">
+                        <mat-label>Name <span class="required">*</span></mat-label>
+                        <input matInput placeholder="Name" formControlName="name">
+                        <mat-error *ngIf="registrationForm.get('name').hasError('required')">Name is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="full-width">
+                        <mat-label>Email<span class="required">*</span></mat-label>
+                        <input matInput type="email" placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="registrationForm.get('email').hasError('required')">Email is required
+                        </mat-error>
+                        <mat-error *ngIf="registrationForm.get('email').hasError('email')">Invalid email</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="full-width">
+                        <mat-label>Password<span class="required">*</span></mat-label>
+                        <input matInput type="password" placeholder="Password" formControlName="password">
+                        <mat-error *ngIf="registrationForm.get('password').hasError('required')">Password is required
+                        </mat-error>
+                        <mat-error *ngIf="registrationForm.get('password').hasError('pattern')"> Password must contain
+                            at least 1 digit,1 uppercase letter, 1 lowercase letter, 1 symbol, and be between 8 and 20
+                            characters.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="full-width">
+                        <mat-label>Confirm Password<span class="required">*</span></mat-label>
+                        <input matInput type="password" placeholder="Confirm Password"
+                            formControlName="confirmPassword">
+                        <mat-error *ngIf="registrationForm.get('confirmPassword').hasError('required')">Confirm Password
+                            is required</mat-error>
+                        <mat-error *ngIf="registrationForm.get('confirmPassword').hasError('passwordMismatch')">
+                            Passwords do not match</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group d-flex justify-content">
+                    <mat-label class="mr-3">Register as<span class="required">*</span></mat-label>
+                    <mat-radio-group formControlName="role">
+                        <mat-radio-button value="C">Customer</mat-radio-button>
+                        <mat-radio-button value="S">Seller</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <button mat-raised-button color="primary" type="submit"
+                    [disabled]="registrationForm.invalid">Register</button>
+            </form>
+
+            <div class="message">
+                <div *ngIf="registrationSuccessMessage" class="success-message text-success">
+                    <mat-icon color="success">check_circle</mat-icon>
+                    {{ registrationSuccessMessage }}
+                </div>
+                <div *ngIf="registrationErrorMessage" class="error-message text-danger">
+                    <mat-icon color="error">error</mat-icon>
+                    {{ registrationErrorMessage }}
+                </div>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

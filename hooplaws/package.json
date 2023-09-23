@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compodoc":"npx compodoc -p src/tsconfig.app.json"
+    "compodoc": "npx compodoc -p src/tsconfig.app.json"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
+    "express-validator": "^7.0.1",
     "gulp": "^4.0.2",
-    "mongoose": "^5.9.9"
+    "mongoose": "^5.9.9",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
