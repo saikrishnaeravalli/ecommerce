@@ -52,6 +52,16 @@ export class ProductService {
       catchError(this.handleError));;;
   }
 
+  // Update the stock of a product by ID
+  updateProductStock(productId: string, newStockQuantity: number): Observable<any> {
+    const url = `${this.baseUrl}/updateStock/${productId}`;
+    const requestBody = { stock: newStockQuantity };
+
+    return this.http.put(url, requestBody).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   // Delete a product by ID
   deleteProduct(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/products/${id}`).pipe(

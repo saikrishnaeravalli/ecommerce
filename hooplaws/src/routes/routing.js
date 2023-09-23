@@ -246,6 +246,30 @@ router.delete('/products/:id', (req, res, next) => {
     });
 });
 
+// Route to update the stock of a product by ID
+router.put('/updateStock/:productId', async (req, res) => {
+  try {
+    const productId = req.params.productId;
+    const newStockQuantity = req.body.stock; // Assuming the new stock quantity is sent in the request body
+
+    // Find the product by ID and update the stock quantity
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      { stock: newStockQuantity },
+      { new: true } // To get the updated product document
+    );
+
+    if (!updatedProduct) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+
+    // Return the updated product as a response
+    res.status(200).json(updatedProduct);
+  } catch (error) {
+    console.error('Error updating stock:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 module.exports = router;

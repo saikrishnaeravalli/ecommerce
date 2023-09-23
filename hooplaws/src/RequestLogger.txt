@@ -3542,3 +3542,5 @@ Tue Sep 19 2023 23:00:00 GMT-0700 (Mountain Standard Time) POST /products
 Tue Sep 19 2023 23:02:45 GMT-0700 (Mountain Standard Time) POST /vieworders
 Tue Sep 19 2023 23:02:48 GMT-0700 (Mountain Standard Time) GET /searchall
 Tue Sep 19 2023 23:02:48 GMT-0700 (Mountain Standard Time) POST /products
+Fri Sep 22 2023 22:13:02 GMT-0700 (Mountain Standard Time) POST /products
+Fri Sep 22 2023 22:13:02 GMT-0700 (Mountain Standard Time) GET /searchall

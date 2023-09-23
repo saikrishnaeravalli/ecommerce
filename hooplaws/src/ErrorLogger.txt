@@ -806,3 +806,9 @@ Sun Apr 09 2023 18:25:49 GMT-0700 (Mountain Standard Time) - Error: Could not co
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 Tue Sep 19 2023 22:49:27 GMT-0700 (Mountain Standard Time) - Error: Could not connect to Database
     at /Users/saikrishna/Desktop/fa4/project/hooplaws/src/utilities/connection.js:43:19
+Fri Sep 22 2023 22:13:03 GMT-0700 (Mountain Standard Time) - Error: No Productdetails found
+    at /Users/saikrishna/Desktop/ecommerce/hooplaws/src/service/user.js:69:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Fri Sep 22 2023 22:13:04 GMT-0700 (Mountain Standard Time) - Error: No Productdetails found
+    at /Users/saikrishna/Desktop/ecommerce/hooplaws/src/service/user.js:19:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

@@ -5,9 +5,9 @@
     <span class="fill"></span>
 
     <!-- Add conditional navigation links for Sign In, Register, and Sign Off -->
-    <button mat-button *ngIf="isTokenInLocalStorage() && !isOnLoginPage()" [routerLink]='["/login"]'>Sign In</button>
-    <button mat-button *ngIf="isTokenInLocalStorage() && !isOnRegisterPage()" [routerLink]='["/register"]'>Register</button>
-    <button mat-button *ngIf="!isTokenInLocalStorage()" (click)="signOff()">Sign Off</button>
+    <button mat-button *ngIf="!isTokenInLocalStorage() && !isOnLoginPage()" [routerLink]='["/login"]'>Sign In</button>
+    <button mat-button *ngIf="!isTokenInLocalStorage() && !isOnRegisterPage()" [routerLink]='["/register"]'>Register</button>
+    <button mat-button *ngIf="isTokenInLocalStorage()" (click)="signOff()">Sign Off</button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

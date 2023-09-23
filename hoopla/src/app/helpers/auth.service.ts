@@ -41,7 +41,6 @@ export class AuthService {
     localStorage.removeItem('authToken');
     localStorage.removeItem('authTokenExpiration');
     localStorage.removeItem('userId');
-    // Remove the role from local storage when logging out
     localStorage.removeItem('userRole');
   }
 
