@@ -6,6 +6,8 @@ const { body, validationResult } = require('express-validator');
 const User = mongoose.model('User');
 const Product = mongoose.model('Product');
 const Image = mongoose.model('Image');
+const Cart = mongoose.model('Cart');
+const Order = mongoose.model('Order');
 const utils = require('../utilities/util');
 var _ = require('lodash')
 
@@ -130,9 +132,15 @@ router.post('/products', upload.array('images'), async (req, res, next) => {
 });
 
 
-// Read all products
+// Read all products with optional category filter
 router.get('/products', (req, res) => {
-  Product.find()
+  // Check if a category filter is provided in the query parameters
+  const category = req.query.category || null;
+
+  // Create a query object with an optional category filter
+  const query = category !== 'All' ? { category } : {};
+
+  Product.find(query)
     .then((products) => {
       res.status(200).json(products);
     })
@@ -140,6 +148,7 @@ router.get('/products', (req, res) => {
       res.status(500).json({ err: 'Error fetching products' });
     });
 });
+
 
 // Route to get an image by ID
 router.get('/images/:imageId', async (req, res) => {
@@ -271,5 +280,154 @@ router.put('/updateStock/:productId', async (req, res) => {
   }
 });
 
+// Create a new cart item or update the quantity if it already exists
+router.post('/addToCart', (req, res) => {
+  const { userId, productId } = req.body;
+
+  // Check if the item already exists in the user's cart
+  Cart.findOne({ userId, productId })
+    .then((existingCartItem) => {
+      if (existingCartItem) {
+        // Item already exists, update the quantity
+        existingCartItem.quantity += 1;
+        existingCartItem.save().then((updatedCartItem) => {
+          res.status(200).json(updatedCartItem);
+        });
+      } else {
+        // Item doesn't exist, create a new cart item
+        const cartItem = new Cart({
+          userId,
+          productId
+        });
+
+        cartItem
+          .save()
+          .then((savedCartItem) => {
+            res.status(201).json(savedCartItem);
+          })
+          .catch((err) => {
+            res.status(500).json({ error: 'Error creating cart item' });
+          });
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({ error: 'Error checking cart items' });
+    });
+});
+
+
+// Get the cart items for a user
+router.get('/cart/:userId', (req, res) => {
+  const userId = req.params.userId
+
+  Cart.find({ userId })
+    .populate('productId')
+    .then((cartItems) => {
+      res.status(200).json(cartItems);
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({ error: 'Error fetching cart items' });
+    });
+});
+
+// Update a cart item
+router.put('/cart/:cartItemId', (req, res) => {
+  const cartItemId = req.params.cartItemId;
+  const { quantity } = req.body;
+
+  Cart.findByIdAndUpdate(cartItemId, { quantity }, { new: true })
+    .then((updatedCartItem) => {
+      res.status(200).json({ success: true });
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({ error: 'Error updating cart item' });
+    });
+});
+
+// Delete a cart item
+router.delete('/cart/:cartItemId', (req, res) => {
+  const cartItemId = req.params.cartItemId;
+
+  Cart.findByIdAndRemove(cartItemId)
+    .then(() => {
+      res.status(200).json({ success: true });
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({ error: 'Error deleting cart item' });
+    });
+});
+
+// Create a new order
+router.post('/addOrder', (req, res) => {
+  // Generate a new order ID (You can use your logic here)
+  generateOrderID()
+    .then((orderID) => {
+      // Create a new order based on the request body
+      const newOrder = new Order({
+        orderID,
+        shippingInformation: req.body.shippingInformation,
+        items: req.body.items,
+        totalAmount: req.body.totalAmount,
+        userId: req.body.userId
+      });
+
+      // Save the order to the database
+      return newOrder.save();
+    })
+    .then((savedOrder) => {
+      res.status(201).json(savedOrder);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+});
+
+// Retrieve all orders
+router.get('/orders', (req, res) => {
+  Order.find()
+    .sort({ orderDate: -1 }) // Sort by most recent orderDate
+    .then((orders) => {
+      res.status(200).json(orders);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+});
+
+
+// Route to clear the cart for a specific user
+router.delete('/clearCart/:userId', (req, res) => {
+  const userId = req.params.userId;
+  Cart.deleteMany({ userId: userId })
+    .then(() => {
+      res.status(200).json({ success: true, message: 'Cart cleared successfully' });
+    })
+    .catch((error) => {
+      console.error('Error clearing cart:', error);
+      res.status(500).json({ success: false, message: 'Error clearing cart' });
+    });
+});
+
+// Generate a new order ID (You can customize this logic)
+function generateOrderID() {
+  return Order.findOne()
+    .sort({ orderDate: -1 })
+    .then((latestOrder) => {
+      if (!latestOrder) {
+        // No previous orders, start with 1001
+        return '1001';
+      }
+
+      // Extract the numeric part of the orderID and increment it
+      const numericPart = parseInt(latestOrder.orderID, 10);
+      const newOrderID = (numericPart + 1).toString();
+
+      return newOrderID;
+    });
+}
 
 module.exports = router;

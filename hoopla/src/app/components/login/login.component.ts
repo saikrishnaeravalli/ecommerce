@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
         (res) => {
           if (res && res.token && res.expiresIn) {
             // Store the token and its expiration using AuthService
-            console.log(res.token, res.expiresIn)
             this.authService.setAuthToken(res.token, res.expiresIn, res.userId);
             this.authService.setUserRole(res.role);
             // Clear any previous login error message

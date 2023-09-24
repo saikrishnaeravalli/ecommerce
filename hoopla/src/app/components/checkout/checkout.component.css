@@ -1,0 +1,74 @@
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 49%;
+}
+
+/* CSS for the second expansion panel */
+.cart-items-card {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%; /* Full width within the card */
+  }
+  
+  .cart-item-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 4px;
+    width: 100%; /* 50% width with some spacing in between */
+  }
+  
+  .cart-item-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .cart-item-image {
+    width: 35%;
+    margin-right: 16px;
+  }
+  
+  /* Set a fixed width and height for all images */
+  .cart-item-image img {
+    width: 100%; /* Set a fixed width for the image */
+    height: 150px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  
+  .cart-item-details {
+    width: 65%;
+    /* Allow the details to occupy full width */
+  }
+
+  /* CSS for the second expansion panel */
+.order-summary-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .cart-items-card {
+    flex: 0 0 75%; /* Occupies 75% of the width */
+    margin-right: 16px; /* Add some spacing between cards */
+  }
+  
+  .delivery-card {
+    flex: 0 0 25%; /* Occupies 25% of the width */
+  }
+  
+  /* Rest of your CSS styles remain the same */
+  
+  
+  /* Adjust other styles (font size, colors, etc.) as needed */
+  

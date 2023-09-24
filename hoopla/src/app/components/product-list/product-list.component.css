@@ -9,7 +9,8 @@
     min-width: calc(30% - 16px); /* Minimum card width with spacing */
     max-width: calc(33.33vh - 16px); /* Maximum card width with spacing */
     box-sizing: border-box;
-    margin: 16px; /* Adjust the margin between rows */
+    margin: auto; /* Adjust the margin between rows */
+    margin-top: 16px;
   }
   
   .product-image img {

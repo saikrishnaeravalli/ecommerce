@@ -1,3 +1,5 @@
 require('./user');
 require('./product');
-require('./image')
+require('./image');
+require('./cart');
+require('./orders');

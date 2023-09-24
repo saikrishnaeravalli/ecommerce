@@ -1,0 +1,63 @@
+<!-- cart.component.html -->
+<h2 class="text-center mt-3">Your Cart ({{ cartItems.length }} items)</h2>
+<div class="cart-container">
+    <!-- Cart items (75% of the screen) -->
+    <div class="cart-items">
+        <form [formGroup]="cartForm">
+            <div formArrayName="items">
+                <!-- Loop through each cart item -->
+                <div *ngFor="let item of cartForm.get('items').controls; let i = index" class="cart-item-container">
+                    <mat-card class="cart-item-card" [formGroupName]="i">
+                        <mat-card-content>
+                            <div class="cart-item-wrapper">
+                                <!-- Image section (40%) -->
+                                <div class="cart-item-image">
+                                    <img *ngIf="productImages[cartItems[i].productId._id]"
+                                        [src]="productImages[cartItems[i].productId._id]" alt="Product image"
+                                        class="image-fit" />
+                                </div>
+                                <!-- Product details section (30%) -->
+                                <div class="cart-item-details">
+                                    <!-- Product name -->
+                                    <h3>{{ cartItems[i].productId.name }}</h3>
+                                    <!-- Product price -->
+                                    <h6>Price: ${{ cartItems[i].productId.price }}</h6>
+                                    <!-- Remove button -->
+                                    <button mat-button color="warn" (click)="removeItem(i)">Remove</button>
+                                </div>
+                                <!-- Quantity section (30%) -->
+                                <div class="cart-item-quantity">
+                                    <!-- Editable quantity field -->
+                                    <label>Quantity:</label>
+                                    <input type="number" formControlName="quantity" (change)="updateQuantity(i)" />
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Checkout section (25% of the screen) -->
+    <div class="checkout">
+        <div class="checkout-content">
+            <!-- Subtotal section -->
+            <div class="subtotal">
+                <p>Subtotal: ${{ total }}</p>
+                <p>Delivery: $0</p>
+            </div>
+
+            <!-- Promo code section -->
+            <mat-form-field>
+                <mat-label>Promocode</mat-label>
+                <input matInput placeholder="Enter promo code">
+            </mat-form-field>
+            <button mat-button color="primary">Apply</button>
+
+            <div class="text-center">
+                <button mat-flat-button color="primary" class="btn-block" [routerLink]='["/checkout"]'>Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

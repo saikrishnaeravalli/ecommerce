@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor() { }
+  constructor(private router: Router) { }
 
-  // Store the authentication token and its expiration
-  setAuthToken(token: string, expiration: string, userId: string): void {
+  setAuthToken(token: string, expirationMinutes: number, userId: string): void {
+    // Calculate the expiration date based on the current time and expirationMinutes
+    const currentTime = new Date().getTime();
+    const expirationTime = currentTime + expirationMinutes * 60 * 1000; // Convert minutes to milliseconds
+
+    // Store the token and its expiration time
     localStorage.setItem('authToken', token);
-    localStorage.setItem('authTokenExpiration', expiration);
+    localStorage.setItem('authTokenExpiration', new Date(expirationTime).toISOString());
     localStorage.setItem('userId', userId);
   }
 
@@ -42,6 +47,7 @@ export class AuthService {
     localStorage.removeItem('authTokenExpiration');
     localStorage.removeItem('userId');
     localStorage.removeItem('userRole');
+    this.router.navigate(['/login'])
   }
 
   // Store the user's role in local storage

@@ -17,6 +17,8 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { SellerOrdersComponent } from './components/seller-orders/seller-orders.component';
 import { SafeUrlPipe } from "./helpers/safeUrl.pipe";
+import { CartComponent } from './components/cart/cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { SafeUrlPipe } from "./helpers/safeUrl.pipe";
     AddProductComponent,
     InventoryComponent,
     SellerOrdersComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
