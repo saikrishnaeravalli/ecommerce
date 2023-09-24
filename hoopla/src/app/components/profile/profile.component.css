@@ -1,0 +1,21 @@
+/* profile.component.css */
+
+/* Style the main card */
+.profile-card {
+    width: 80%; /* Set the card width to 80% of the screen */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 20px;
+  }
+  
+  /* Style form fields to occupy full width */
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Style the button container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  

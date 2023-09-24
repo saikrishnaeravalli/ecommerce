@@ -6,6 +6,7 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { LoginComponent } from "./components/login/login.component";
 import { OrderPageComponent } from "./components/order-page/order-page.component";
 import { ProductsComponent } from "./components/products/products.component";
+import { ProfileComponent } from "./components/profile/profile.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { ViewordersComponent } from "./components/vieworders/vieworders.component";
 import { LoginGuard } from "./helpers/login.guard";
@@ -18,8 +19,9 @@ const routes: Routes = [{ path: "", redirectTo: "/login", pathMatch: "full" },
 { path: "orders", component: ViewordersComponent, canActivate: [LoginGuard] },
 { path: "orders/:id", component: OrderPageComponent, canActivate: [LoginGuard] },
 { path: "checkout", component: CheckoutComponent, canActivate: [LoginGuard] },
+{ path: "profile", component: ProfileComponent, canActivate: [LoginGuard] },
 { path: "products/:id", component: ProductsComponent },
-{ path: "vieworders", component: ViewordersComponent }];
+{ path: "vieworders", component: ViewordersComponent, canActivate: [LoginGuard] }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

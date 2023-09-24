@@ -448,4 +448,39 @@ function generateOrderID() {
     });
 }
 
+// Get user profile by ID
+router.get('/users/:userId', async (req, res) => {
+  const userId = req.params.userId;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Return user profile
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update user profile by ID
+router.put('/users/:userId', async (req, res) => {
+  const userId = req.params.userId;
+  const updatedProfile = req.body; // Assuming the request body contains updated profile data
+
+  try {
+    const user = await User.findByIdAndUpdate(userId, updatedProfile, { new: true });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Return updated user profile
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

@@ -19,6 +19,7 @@ import { SafeUrlPipe } from "./helpers/safeUrl.pipe";
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderPageComponent } from './components/order-page/order-page.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { OrderPageComponent } from './components/order-page/order-page.component
     SafeUrlPipe,
     CartComponent,
     CheckoutComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
