@@ -6,7 +6,30 @@
 
     <!-- Add conditional navigation links for Sign In, Register, and Sign Off -->
     <button mat-button *ngIf="!isTokenInLocalStorage() && !isOnLoginPage()" [routerLink]='["/login"]'>Sign In</button>
-    <button mat-button *ngIf="!isTokenInLocalStorage() && !isOnRegisterPage()" [routerLink]='["/register"]'>Register</button>
+    <button mat-button *ngIf="!isTokenInLocalStorage() && !isOnRegisterPage()"
+        [routerLink]='["/register"]'>Register</button>
+    <ng-container *ngIf="isTokenInLocalStorage()">
+        <!-- Categories icon and menu -->
+        <button mat-button [matMenuTriggerFor]="categoriesMenu" [routerLink]='["/dashboard"]'>
+            Categories
+            <!-- <mat-icon>arrow_drop_down</mat-icon> -->
+        </button>
+        <mat-menu #categoriesMenu="matMenu">
+            <button mat-menu-item (click)="filterByCategory('All')">No category</button>
+            <button mat-menu-item (click)="filterByCategory('Home')">Home</button>
+            <button mat-menu-item (click)="filterByCategory('Electronics')">Electronics</button>
+            <button mat-menu-item (click)="filterByCategory('Sports')">Sports</button>
+            <button mat-menu-item (click)="filterByCategory('Others')">Others</button>
+        </mat-menu>
+
+        <button mat-button [routerLink]='["/orders"]'>Orders</button>
+        <button mat-icon-button [routerLink]='["/cart"]'>
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button [routerLink]='["/profile"]'>
+            <mat-icon>account_circle</mat-icon>
+        </button>
+    </ng-container>
     <button mat-button *ngIf="isTokenInLocalStorage()" (click)="signOff()">Sign Off</button>
 </mat-toolbar>
 

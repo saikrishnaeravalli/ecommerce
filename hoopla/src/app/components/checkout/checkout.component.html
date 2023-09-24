@@ -1,0 +1,180 @@
+<div *ngIf="!orderPlaced">
+    <mat-accordion class="example-headers-align">
+        <!-- Shipping Information Expansion Panel -->
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Shipping Information
+                </mat-panel-title>
+                <mat-panel-description>
+                    Enter your shipping details
+                    <mat-icon class="ml-2">local_shipping</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+                <div formGroupName="shippingInformation">
+                    <div class="form-group">
+                        <mat-form-field class="full-width">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput formControlName="fullName" placeholder="Enter your full name" required>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.fullName').hasError('required')">
+                                Full
+                                Name is required</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field class="full-width">
+                            <mat-label>Address Line 1</mat-label>
+                            <input matInput formControlName="address1" placeholder="Enter your address" required>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.address1').hasError('required')">
+                                Address
+                                Line 1 is required</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field class="full-width">
+                            <mat-label>Address Line 2</mat-label>
+                            <input matInput formControlName="address2" placeholder="Enter your address">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="horizontal-fields">
+                        <mat-form-field class="half-width">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="city" placeholder="Enter your city" required>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.city').hasError('required')">City is
+                                required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="half-width ml-3">
+                            <mat-label>State</mat-label>
+                            <mat-select formControlName="state" placeholder="Select your state" required>
+                                <!-- Add options for states -->
+                                <mat-option value="AZ">Arizona</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.state').hasError('required')">State
+                                is
+                                required</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="horizontal-fields">
+                        <mat-form-field class="half-width">
+                            <mat-label>Country</mat-label>
+                            <mat-select formControlName="country" placeholder="Select your country" required>
+                                <!-- Add options for countries -->
+                                <mat-option value="USA">United States of America</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.country').hasError('required')">
+                                Country
+                                is required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="half-width ml-3">
+                            <mat-label>Zip Code</mat-label>
+                            <input matInput formControlName="zipcode" placeholder="Enter your zip code" required>
+                            <mat-error *ngIf="checkoutForm.get('shippingInformation.zipcode').hasError('required')">Zip
+                                Code
+                                is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <!-- Include other form groups for payment information, order summary, etc. -->
+
+                <mat-action-row>
+                    <button mat-button color="primary" [disabled]="checkoutForm.invalid">Next</button>
+                </mat-action-row>
+            </form>
+        </mat-expansion-panel>
+
+        <!-- Order Summary Expansion Panel -->
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Order Summary
+                </mat-panel-title>
+                <mat-panel-description>
+                    Review your order
+                    <mat-icon class="ml-2">shopping_cart</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <!-- Display order summary details here (e.g., products, total, etc.) -->
+
+            <div *ngIf="step === 1">
+                <!-- Only display this content if the step is 1 -->
+                <div class="order-summary-container">
+                    <!-- Left card for displaying cart items (occupies 75%) -->
+                    <mat-card class="cart-items-card">
+                        <mat-card-content>
+                            <div class="cart-items">
+                                <div *ngFor="let item of cartItems" class="cart-item-container">
+                                    <!-- ... (existing card content) ... -->
+                                    <div class="cart-item-wrapper">
+                                        <!-- Product image section -->
+                                        <div class="cart-item-image">
+                                            <!-- You can display the product image here if available -->
+                                            <img *ngIf="productImages[item.productId._id]"
+                                                [src]="productImages[item.productId._id]" alt="Product image"
+                                                class="image-fit" />
+                                        </div>
+                                        <!-- Product details section -->
+                                        <div class="cart-item-details" style="width: 65%; margin-left: 5%;">
+                                            <!-- Product name -->
+                                            <h3>{{ item.productId.name }}</h3>
+                                            <!-- Product price and quantity -->
+                                            <p>Price: ${{ item.productId.price }}</p>
+                                            <p>Quantity: {{ item.quantity }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <!-- Right card for "Delivers to" (occupies 25%) -->
+                    <mat-card class="delivery-card">
+                        <mat-card-content>
+                            <h5>Total : ${{total}}</h5>
+                            <h5>Delivers to</h5>
+                            <div class="shipping-information">
+                                <!-- Display shipping information here -->
+                                <h6> {{ checkoutForm.get('shippingInformation.fullName').value | titlecase}}
+                                </h6>
+                                <h6> {{
+                                    checkoutForm.get('shippingInformation.address1').value }} {{
+                                    checkoutForm.get('shippingInformation.address2').value }}</h6>
+                                <h6>{{ checkoutForm.get('shippingInformation.city').value }} {{
+                                    checkoutForm.get('shippingInformation.state').value }}
+                                </h6>
+                                <h6>{{ checkoutForm.get('shippingInformation.country').value }} {{
+                                    checkoutForm.get('shippingInformation.zipcode').value }}</h6>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+
+            <mat-action-row>
+                <button mat-flat-button color="warn" (click)="prevStep()">Previous</button>
+                <button mat-flat-button color="primary" [disabled]="checkoutForm.invalid || cartItems.length < 1"
+                    (click)="placeOrder()">Place
+                    Order</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
+<!-- Thank you message -->
+<div *ngIf="orderPlaced" style="text-align: center;margin-top: 5%;">
+    <mat-icon class="thank-you-icon" style="color: green;size: 28px;">check_circle</mat-icon>
+    <h2 class="text-success">Thank you for your purchase!</h2>
+    <p>Your order number is: {{ orderNumber }}</p>
+    <button mat-flat-button color="primary" [routerLink]="['/dashboard']">Continue Shopping</button>
+</div>

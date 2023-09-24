@@ -12,3 +12,24 @@
     font-family: fantasy;
     font-optical-sizing: 200px;
 }  
+
+/* Style the category menu container */
+.category-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Match the text size with "Orders" */
+  }
+  
+  /* Style the dropdown icon */
+  .dropdown-icon {
+    font-size: 20px; /* Adjust the size of the icon */
+    vertical-align: middle; /* Align icon vertically with text */
+  }
+  
+  /* Style the dropdown menu */
+  .mat-menu-panel {
+    min-width: auto; /* Adjust the width of the dropdown panel if needed */
+  }
+  

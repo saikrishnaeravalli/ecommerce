@@ -1,24 +1,30 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav class="sidenav" mode="side" opened>
-    <button mat-button (click)="activeSection = 'seller-dashboard'">Seller Dashboard</button>
-    <button mat-button (click)="activeSection = 'add-product'">Add Product</button>
-    <button mat-button (click)="activeSection = 'orders'">Orders</button>
-    <button mat-button (click)="activeSection = 'inventory'">Inventory</button>
-  </mat-sidenav>
+<ng-container *ngIf="userType === 'S'">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="side" opened>
+      <button mat-button (click)="activeSection = 'seller-dashboard'">Seller Dashboard</button>
+      <button mat-button (click)="activeSection = 'add-product'">Add Product</button>
+      <button mat-button (click)="activeSection = 'orders'">Orders</button>
+      <button mat-button (click)="activeSection = 'inventory'">Inventory</button>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
-    <!-- Conditionally include components based on activeSection -->
-    <div *ngIf="activeSection === 'seller-dashboard'">
-      <app-product-list></app-product-list>
-    </div>
-    <div *ngIf="activeSection === 'add-product'">
-      <app-add-product></app-add-product>
-    </div>
-    <div *ngIf="activeSection === 'orders'">
-      Orders Section works
-    </div>
-    <div *ngIf="activeSection === 'inventory'">
-      <app-inventory></app-inventory>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-sidenav-content>
+      <!-- Conditionally include components based on activeSection -->
+      <div *ngIf="activeSection === 'seller-dashboard'">
+        <app-product-list [categoryFilter]="'All'"></app-product-list>
+      </div>
+      <div *ngIf="activeSection === 'add-product'">
+        <app-add-product></app-add-product>
+      </div>
+      <div *ngIf="activeSection === 'orders'">
+        Orders Section works
+      </div>
+      <div *ngIf="activeSection === 'inventory'">
+        <app-inventory></app-inventory>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
+
+<ng-container *ngIf="userType === 'C'">
+  <app-product-list [categoryFilter]="selectedCategory"></app-product-list>
+</ng-container>

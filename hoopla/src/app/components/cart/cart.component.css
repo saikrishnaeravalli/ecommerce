@@ -1,0 +1,96 @@
+/* cart.component.css */
+
+/* Container for the entire cart page */
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Cart items section (75% of the screen) */
+  .cart-items {
+    flex: 0 0 75%; /* Occupy 75% of the available width, don't grow or shrink */
+    padding: 16px; /* Add padding for spacing */
+  }
+  
+  /* Cart item container */
+  .cart-item-container {
+    margin-bottom: 16px; /* Add margin for spacing between cards */
+  }
+  
+  /* Define the layout for the cart-item-wrapper */
+  .cart-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* cart.component.css */
+
+/* Image section (40%) */
+.cart-item-image {
+    flex: 40%;
+    height: 100%; /* Ensure the image takes up the full height of the container */
+    padding: 16px; /* Add padding for spacing */
+  }
+  
+  /* Image-fit class to make the image fill the available height */
+  .cart-item-image img {
+    max-height: 100%; /* Set the maximum height for the images */
+    max-width: 100%; /* Set the maximum width for the images */
+    object-fit: contain; /* Adjust object-fit as needed (e.g., cover) */
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    height: auto; /* Allow the height to adjust based on the aspect ratio */
+  }
+  
+  
+  /* cart.component.css */
+
+/* Product details section (30%) */
+.cart-item-details {
+    flex: 30%;
+    display: flex; /* Add flex display to align items horizontally */
+    flex-direction: column; /* Stack elements vertically within this section */
+    padding: 16px; /* Add padding for spacing */
+  }  
+  
+  /* Quantity section (30%) */
+  .cart-item-quantity {
+    flex: 50%;
+    padding: 16px; /* Add padding for spacing */
+  }
+  
+  /* Checkout section (25% of the screen) */
+  .checkout {
+    flex: 0 0 25%; /* Occupy 25% of the available width, don't grow or shrink */
+    padding: 16px; /* Add padding for spacing */
+    border-left: 1px solid #ccc; /* Add a partition line on the left */
+  }
+  
+  /* Checkout header */
+  .checkout-header {
+    margin-bottom: 16px; /* Add margin for spacing between header and content */
+  }
+  
+  /* Add additional styles for the checkout content as needed */
+  /* Add these styles to your existing cart.component.css */
+
+/* Checkout section (25% of the screen) */
+.checkout {
+    flex: 0 0 25%; /* Occupy 25% of the available width, don't grow or shrink */
+    padding: 16px; /* Add padding for spacing */
+    border-left: 1px solid #ccc; /* Add a partition line on the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Vertically align content within the section */
+}
+
+/* Subtotal section */
+.subtotal {
+    text-align: left; /* Align text to the right */
+}
+
+.subtotal p {
+    margin: 4px 0; /* Add spacing between the pricing elements */
+}
+
+  

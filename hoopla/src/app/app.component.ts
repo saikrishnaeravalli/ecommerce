@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "./helpers/auth.service";
+import { CategoryService } from "./helpers/category.service";
 
 @Component({
   selector: "app-root",
@@ -8,7 +9,7 @@ import { AuthService } from "./helpers/auth.service";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private categoryService: CategoryService) { }
 
   ngOnInit() { }
 
@@ -33,5 +34,9 @@ export class AppComponent {
     this.authService.logout();
 
     // You can also add redirection logic if needed
+  }
+
+  filterByCategory(category: string): void {
+    this.categoryService.setSelectedCategory(category);
   }
 }

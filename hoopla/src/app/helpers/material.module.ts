@@ -12,6 +12,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTableModule} from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {MatTableModule} from '@angular/material/table';
         MatListModule,
         MatSidenavModule,
         MatProgressBarModule,
-        MatTableModule
+        MatTableModule,
+        MatMenuModule,
+        MatExpansionModule
     ]
 })
 export class MaterialModule { }

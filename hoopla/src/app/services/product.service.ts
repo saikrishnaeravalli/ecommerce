@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { forkJoin, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { catchError } from 'rxjs/operators';
 
@@ -13,8 +13,8 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   // Get all products
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/products`).pipe(
+  getProducts(category?: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/` + category).pipe(
       catchError(this.handleError));;;
   }
 
@@ -32,7 +32,7 @@ export class ProductService {
     // Handle the case when there are no images, perhaps return a default image or an empty string
     return new Observable();
   }
-  
+
 
   // Add a new product
   saveProduct(productData: any, images: File[]): Promise<any> {

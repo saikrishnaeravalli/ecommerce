@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { AuthService } from 'src/app/helpers/auth.service';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,19 +11,43 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
+
+  @Input() categoryFilter: string | null;
   products: any[] = [];
   productImages: { [productId: string]: SafeUrl } = {};
   userType = "C";
+  userId: string;
 
-  constructor(private productService: ProductService, private sanitizer: DomSanitizer, private authService: AuthService) { }
+  constructor(private productService: ProductService, private sanitizer: DomSanitizer, private authService: AuthService,
+    private cartService: CartService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.userType = this.authService.getUserRole();
-    this.loadProducts();
+    this.userId = this.authService.getUserId();
+    // Load products based on the categoryFilter if it's provided
+    if (this.categoryFilter !== null) {
+      this.loadProducts(this.categoryFilter);
+    } else {
+      // Load all products if no category filter is provided
+      this.loadProducts();
+    }
   }
 
-  loadProducts() {
-    this.productService.getProducts().subscribe((data) => {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.categoryFilter && !changes.categoryFilter.firstChange) {
+      // When the categoryFilter input property changes, fetch products based on the new category
+      if (this.categoryFilter !== null) {
+        this.loadProducts(this.categoryFilter);
+      } else {
+        // Load all products if no category filter is provided
+        this.loadProducts();
+      }
+    }
+  }
+
+  loadProducts(category?: string) {
+    const endpoint = category ? `products?category=${category}` : 'products';
+    this.productService.getProducts(endpoint).subscribe((data) => {
       this.products = data;
 
       // Assuming that each product has an 'images' property which is an array of image IDs
@@ -47,6 +73,26 @@ export class ProductListComponent implements OnInit {
       // If the deletion is successful, update the product list
       this.loadProducts();
     });
+  }
+
+  addToCart(product: any): void {
+    const productId = product._id;
+
+    // Pass the userId when calling addToCart
+    this.cartService.addToCart(productId, this.userId).subscribe(
+      (response) => {
+        // Show a success notification
+        this.snackBar.open('Item added to cart', 'Close', {
+          duration: 2000, // Adjust the duration as needed
+        });
+      },
+      (error) => {
+        // Show an error notification
+        this.snackBar.open('Failed to add item to cart', 'Close', {
+          duration: 2000, // Adjust the duration as needed
+        });
+      }
+    );
   }
 
 }

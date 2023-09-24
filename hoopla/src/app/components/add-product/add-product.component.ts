@@ -56,7 +56,6 @@ export class AddProductComponent implements OnInit {
 
         this.productService.saveProduct(this.productForm.value, this.selectedFiles)
           .then(product => {
-            console.log('Product added:', product);
 
             // Show success notification
             this.snackBar.open('Product added successfully!', 'Close', {
