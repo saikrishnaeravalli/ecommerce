@@ -398,6 +398,24 @@ router.get('/orders', (req, res) => {
     });
 });
 
+// Retrieve a specific order by orderId
+router.get('/orders/:orderId', (req, res) => {
+  const orderId = req.params.orderId;
+
+  Order.findOne({ orderID: orderId }) // Use findOne instead of find to get a single order
+    .populate('items.productId') // Populate the product details for each order item
+    .then((order) => {
+      if (!order) {
+        // If the order is not found, return a 404 response
+        res.status(404).json({ error: 'Order not found' });
+      } else {
+        res.status(200).json(order);
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+});
 
 // Route to clear the cart for a specific user
 router.delete('/clearCart/:userId', (req, res) => {

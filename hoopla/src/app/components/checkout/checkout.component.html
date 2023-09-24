@@ -175,6 +175,7 @@
 <div *ngIf="orderPlaced" style="text-align: center;margin-top: 5%;">
     <mat-icon class="thank-you-icon" style="color: green;size: 28px;">check_circle</mat-icon>
     <h2 class="text-success">Thank you for your purchase!</h2>
-    <p>Your order number is: {{ orderNumber }}</p>
+    <p>Your order number is: <span style="text-decoration: underline;cursor: pointer;"
+            (click)="navigateToOrder(orderNumber)">{{ orderNumber }}</span></p>
     <button mat-flat-button color="primary" [routerLink]="['/dashboard']">Continue Shopping</button>
 </div>

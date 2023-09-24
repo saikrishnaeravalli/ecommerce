@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/helpers/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -19,7 +20,7 @@ export class ProductListComponent implements OnInit {
   userId: string;
 
   constructor(private productService: ProductService, private sanitizer: DomSanitizer, private authService: AuthService,
-    private cartService: CartService, private snackBar: MatSnackBar) { }
+    private cartService: CartService, private snackBar: MatSnackBar, private router: Router) { }
 
   ngOnInit(): void {
     this.userType = this.authService.getUserRole();
@@ -89,6 +90,24 @@ export class ProductListComponent implements OnInit {
       (error) => {
         // Show an error notification
         this.snackBar.open('Failed to add item to cart', 'Close', {
+          duration: 2000, // Adjust the duration as needed
+        });
+      }
+    );
+  }
+
+  buyNow(product: any): void {
+    const productId = product._id;
+
+    // Pass the userId when calling addToCart
+    this.cartService.addToCart(productId, this.userId).subscribe(
+      (response) => {
+        // Show a success notification
+        this.router.navigate(["/checkout"])
+      },
+      (error) => {
+        // Show an error notification
+        this.snackBar.open('Failed to buy, Try again !', 'Close', {
           duration: 2000, // Adjust the duration as needed
         });
       }

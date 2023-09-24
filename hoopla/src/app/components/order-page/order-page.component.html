@@ -1,0 +1,42 @@
+<!-- order-page.component.html -->
+
+<mat-card class="order-card">
+    <mat-card-title class="text-center">Order Details</mat-card-title>
+
+    <div class="order-details">
+        <div class="order-id">Order ID: {{ order.orderID }}</div>
+        <div class="delivered-to">Ordered On: {{ order.orderDate | date}}</div>
+    </div>
+    
+    <p>Total: <strong>${{ order.totalAmount }}</strong></p>
+
+    <mat-card-content>
+        <p><strong>Shipping Address:</strong></p>
+        <p>{{ order.shippingInformation.fullName }}</p>
+        <p>{{ order.shippingInformation.address1 }} {{ order.shippingInformation.address2 }}</p>
+        <p>{{ order.shippingInformation.city }}, {{ order.shippingInformation.state }}</p>
+        <p>{{ order.shippingInformation.country }}, {{ order.shippingInformation.zipcode }}</p>
+    </mat-card-content>
+
+    <mat-card-content class="order-items">
+        <h5>Order Items:</h5>
+        
+        <div *ngFor="let item of orderItems" class="order-item-container">
+            <!-- Order item details -->
+            <div class="order-item-image">
+                <img *ngIf="productImages[item.productId._id]" [src]="productImages[item.productId._id]" alt="Product image" />
+            </div>
+            <div class="order-item-details">
+                <!-- Product name -->
+                <h3>{{ item.productId.name }}</h3>
+                <!-- Product price and quantity -->
+                <p>Price: ${{ item.price }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-flat-button color="primary" class="back-button btn-block" routerLink="/orders">Back to Orders</button>
+    </mat-card-actions>
+</mat-card>

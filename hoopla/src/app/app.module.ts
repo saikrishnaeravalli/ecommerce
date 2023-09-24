@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { BuyOrderComponent } from "./components/buy-order/buy-order.component";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { LoginComponent } from "./components/login/login.component";
 import { ProductsComponent } from "./components/products/products.component";
@@ -19,6 +18,7 @@ import { SellerOrdersComponent } from './components/seller-orders/seller-orders.
 import { SafeUrlPipe } from "./helpers/safeUrl.pipe";
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderPageComponent } from './components/order-page/order-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     LoginComponent,
     DashboardComponent,
     ProductsComponent,
-    BuyOrderComponent,
     ViewordersComponent,
     RegisterComponent,
     ProductListComponent,
@@ -35,7 +34,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     SellerOrdersComponent,
     SafeUrlPipe,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderPageComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/helpers/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -22,7 +23,7 @@ export class CheckoutComponent implements OnInit {
   orderNumber:string;
 
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private cartService: CartService,
+  constructor(private fb: FormBuilder, private authService: AuthService, private cartService: CartService,private router:Router,
     private productService: ProductService, private sanitizer: DomSanitizer, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
@@ -90,11 +91,14 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
+  navigateToOrder(orderNumber:any){
+    this.router.navigate(['/orders',orderNumber])
+  }
+
   placeOrder() {
     // Check if the form is valid before placing the order
     if (this.checkoutForm.valid) {
       // Prepare the order data based on your model
-      console.log(this.cartItems)
       const orderData = {
         shippingInformation: this.checkoutForm.get('shippingInformation').value,
         items: this.cartItems.map(item => ({
@@ -111,7 +115,6 @@ export class CheckoutComponent implements OnInit {
         .subscribe(
           (response) => {
             // Handle a successful order creation response
-            console.log('Order placed successfully:', response);
 
             this.cartService.clearCart(this.userId).subscribe(
               () => {
