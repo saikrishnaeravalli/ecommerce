@@ -1,28 +1,19 @@
-<mat-toolbar class="nav">
-  <mat-icon   [routerLink]='["/dashboard"]'>home</mat-icon>
-  <span [routerLink]='["/dashboard"]' >Home</span>
-  
-    <!-- This fills the remaining space of the current row -->
-    <span class="fill"></span>
-    <div>welcome {{sesuser}}</div>
-    <button mat-button class="fill1" id="log" (click)="logof()"><h4>Logout</h4></button>
-  </mat-toolbar>
-  <div style="background-color: rgb(185, 182, 182);"> <br>
-        <h4 class="text-center" id="textMessage">Your Orders</h4>
-        <div class="row"  *ngFor="let prod of vieworder">
-            <div class="col-md-4 offset-4"><br>
-            <mat-card style="background-color:rgb(211, 211, 211); color: black;">
-              <mat-card-title class=" text-center">
-              <span class="text-center">{{prod.pName}}({{prod.color}})</span> 
-              </mat-card-title>
-              <mat-card-content>   
-                  <span class="fill2">Product Id:{{prod._id}}<span class="fill3">Seller:{{prod.pSeller.SId}}</span></span> <br>
-                  <span class="fill2">Product Rating:{{prod.pRating}}/5<span class="fill4">Price: {{(prod.price)-(prod.price*prod.pSeller.pDiscount)|currency:'INR'}}</span></span> 
-                  </mat-card-content>
-              <mat-card-footer class="text-center">
-                  <span class="text-success">You Saved  {{prod.price*prod.pSeller.pDiscount|currency:'INR'}} on this Order</span>
-              </mat-card-footer>
-            </mat-card>
-          </div>
-        </div>
-      </div>
+<!-- orders.component.html -->
+<h3 class="text-center mt-3">Your Orders</h3>
+<mat-card class="order-card" *ngFor="let order of orders">
+  <div class="order-card-details">
+    <mat-card-title>Order ID: {{ order.orderID }}</mat-card-title>
+    <mat-card-subtitle>Date: {{ order.orderDate | date }}</mat-card-subtitle>
+    <mat-card-subtitle>Total: ${{ order.totalAmount }}</mat-card-subtitle>
+  </div>
+  <mat-card-content>
+    <p><strong>Delivered to:</strong></p>
+    <p>{{ order.shippingInformation.fullName }}</p>
+    <p>{{ order.shippingInformation.address1 }}  {{ order.shippingInformation.address2 }}</p>
+    <p>{{ order.shippingInformation.city }}, {{ order.shippingInformation.state }}</p>
+    <p>{{ order.shippingInformation.country }}, {{ order.shippingInformation.zipcode }}</p>
+  </mat-card-content>
+  <mat-card-actions class="mr-3">
+    <button mat-flat-button color="primary" [routerLink]='["/orders/",order.orderID]'>View Items</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,76 @@
+/* order-page.component.css */
+
+/* Style the main card */
+.order-card {
+    width: 80%; /* Set the card width to 80% of the screen */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 20px;
+}
+
+/* Style the title */
+.mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the order details row */
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style the Order ID and Delivered to individually */
+.order-id {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.delivered-to {
+    font-size: 16px;
+}
+
+/* Style the order items */
+.order-items {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.order-item-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style the product image container */
+.order-item-image img {
+    width: 50vh; /* Fixed width for the image */
+    height: 100%; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.order-item-details {
+    flex-grow: 1; /* Expand to fill available space */
+    margin-left: 20px;
+}
+
+/* Style the product name */
+.order-item-details h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Style the product price and quantity */
+.order-item-details p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Style the back button */
+.back-button {
+    margin-top: 20px;
+}

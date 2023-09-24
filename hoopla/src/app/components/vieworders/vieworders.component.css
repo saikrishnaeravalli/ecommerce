@@ -1,22 +1,36 @@
-.fill{
-    
-    flex: 1 1 auto;
-  }
+/* Styling for the order cards */
+.order-card {
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+  justify-content: space-between; /* Space between Order ID and Date */
+  width: 100%; /* Adjust the width as needed */
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: #f5f5f5;
+}
 
-.fill1{
-    margin-left: 20px;
-  }
-  .fill2{
-    margin-left: 20px;
-  }
-  .fill3{
-    margin-left: 70px;
-  }
-  .fill4{
-    margin-left: 40px;
-  }
-  .nav{
-    background-color:rgb(20, 16, 16) ;
-    color: white;
-  }
-  
+.order-card-details {
+  display: flex;
+  flex-direction: column; /* Arrange details vertically */
+}
+
+.order-card mat-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.order-card mat-card-subtitle {
+  font-size: 14px;
+  color: black;
+}
+
+.order-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.order-card p {
+  font-size: 14px;
+  margin: 4px 0;
+}
