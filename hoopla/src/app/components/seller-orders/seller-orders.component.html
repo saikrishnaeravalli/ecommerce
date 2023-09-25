@@ -1,1 +1,46 @@
-<p>seller-orders works!</p>
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <!-- Order ID Column -->
+    <ng-container matColumnDef="orderID">
+      <mat-header-cell *matHeaderCellDef> Order ID </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{ order.orderID }} </mat-cell>
+    </ng-container>
+  
+    <!-- Order Date Column -->
+    <ng-container matColumnDef="orderDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Order Date </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{ order.orderDate | date }} </mat-cell>
+    </ng-container>
+  
+    <!-- Item Details Column -->
+    <ng-container matColumnDef="itemDetails">
+      <mat-header-cell *matHeaderCellDef> Item Details </mat-header-cell>
+      <mat-cell *matCellDef="let order" [attr.colspan]="displayedColumns.length">
+        <table mat-table [dataSource]="order.items" class="inner-table" matSort>
+          <!-- Product Name Column -->
+          <ng-container matColumnDef="productName">
+            <th mat-header-cell *matHeaderCellDef> Product Name </th>
+            <td mat-cell *matCellDef="let item"> {{ item.productId.name }} </td>
+          </ng-container>
+  
+          <!-- Price Column -->
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let item"> ${{ item.price }} </td>
+          </ng-container>
+  
+          <!-- Quantity Column -->
+          <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef> Quantity </th>
+            <td mat-cell *matCellDef="let item"> {{ item.quantity }} </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedItemColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedItemColumns;"></tr>
+        </table>
+      </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  

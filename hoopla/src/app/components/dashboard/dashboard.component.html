@@ -1,22 +1,22 @@
 <ng-container *ngIf="userType === 'S'">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav class="sidenav" mode="side" opened>
-      <button mat-button (click)="activeSection = 'seller-dashboard'">Seller Dashboard</button>
-      <button mat-button (click)="activeSection = 'add-product'">Add Product</button>
-      <button mat-button (click)="activeSection = 'orders'">Orders</button>
-      <button mat-button (click)="activeSection = 'inventory'">Inventory</button>
+      <button mat-button (click)="setActiveSection('seller-dashboard')">Seller Dashboard</button>
+      <button mat-button (click)="setActiveSection('add-product')">Add Product</button>
+      <button mat-button (click)="setActiveSection('orders')">Selling Orders</button>
+      <button mat-button (click)="setActiveSection('inventory')">Inventory</button>
     </mat-sidenav>
 
     <mat-sidenav-content>
       <!-- Conditionally include components based on activeSection -->
       <div *ngIf="activeSection === 'seller-dashboard'">
-        <app-product-list [categoryFilter]="'All'"></app-product-list>
+        <app-product-list [categoryFilter]="selectedCategory"></app-product-list>
       </div>
       <div *ngIf="activeSection === 'add-product'">
         <app-add-product></app-add-product>
       </div>
       <div *ngIf="activeSection === 'orders'">
-        Orders Section works
+        <app-seller-orders></app-seller-orders>
       </div>
       <div *ngIf="activeSection === 'inventory'">
         <app-inventory></app-inventory>

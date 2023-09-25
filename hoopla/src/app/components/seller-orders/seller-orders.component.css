@@ -1,0 +1,29 @@
+/* Style for the outer table cell */
+.outer-table-cell {
+    display: flex; /* Use flex layout for the cell */
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: space-between; /* Distribute space evenly between items */
+    width: 100%; /* Use the full width of the cell */
+  }
+  
+  /* Style for the inner item details table (occupying 50% of space) */
+  .inner-table {
+    flex: 1; /* Occupy 50% of available space */
+    margin: 0; /* Remove any default margin */
+    border: none; /* Remove the border */
+  }
+  
+  /* Style for the inner table columns */
+  .inner-table th,
+  .inner-table td {
+    padding: 8px; /* Add padding for spacing */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for separation */
+  }
+  
+  /* Style for the inner table header cells */
+  .inner-table th {
+    background-color: #f5f5f5; /* Add a background color for header cells */
+    font-weight: bold; /* Make header text bold */
+  }
+  

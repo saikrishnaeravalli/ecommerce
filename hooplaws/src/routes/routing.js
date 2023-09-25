@@ -149,6 +149,24 @@ router.get('/products', (req, res) => {
     });
 });
 
+// Read products by seller ID
+router.get('/inventory/:userId', (req, res) => {
+  const userId = req.params.userId;
+
+  Product.find({ seller: userId })
+    .then((products) => {
+      if (!products || products.length === 0) {
+        return res.status(404).json({ error: 'No products found for this seller' });
+      }
+      res.status(200).json(products);
+    })
+    .catch((error) => {
+      if (error instanceof mongoose.CastError) {
+        return res.status(400).json({ error: 'Invalid user ID' });
+      }
+      res.status(500).json({ error: 'Error fetching the products' });
+    });
+});
 
 // Route to get an image by ID
 router.get('/images/:imageId', async (req, res) => {
@@ -387,10 +405,12 @@ router.post('/addOrder', (req, res) => {
 });
 
 // Retrieve all orders
-router.get('/orders', (req, res) => {
-  Order.find()
+router.get('/getOrders/:userId', (req, res) => {
+  const userId = req.params.userId
+  Order.find({ userId })
     .sort({ orderDate: -1 }) // Sort by most recent orderDate
     .then((orders) => {
+      console.log(orders)
       res.status(200).json(orders);
     })
     .catch((error) => {
@@ -481,6 +501,40 @@ router.put('/users/:userId', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+});
+
+// Define a route to fetch orders by seller's user ID
+router.get('/sellerOrders/:userId', (req, res) => {
+  const userId = req.params.userId;
+
+  // Find orders where the seller's user ID matches the provided user ID
+  Order.find({}, { orderID: 1, orderDate: 1, items: 1, shippingInformation: 1, _id: 0 })
+    .populate({
+      path: 'items.productId',
+      match: { seller: userId },
+      select: 'name seller', // Select only the necessary product fields
+    })
+    .then((orders) => {
+      console.log(orders)
+      // Filter orders to include only items with matching sellers
+      const filteredOrders = orders.map((order) => {
+        const filteredItems = order.items.filter((item) => item.productId && item.productId.seller.equals(userId));
+        if (filteredItems.length > 0) {
+          return {
+            ...order.toObject(),
+            items: filteredItems,
+          };
+        }
+        return null;
+      }).filter((order) => order !== null);
+
+
+
+      res.status(200).json(filteredOrders);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
 });
 
 module.exports = router;
