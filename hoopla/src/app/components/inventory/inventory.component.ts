@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { AuthService } from 'src/app/helpers/auth.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class InventoryComponent implements OnInit {
   filteredProducts: any[] = [];
   categories: string[] = [];
   displayedColumns: string[] = ['name', 'dateCreated', 'price', 'stock'];
+  userId: string;
 
   filterForm: FormGroup;
 
@@ -25,7 +27,8 @@ export class InventoryComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private fb: FormBuilder,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private authService: AuthService
   ) {
     this.filterForm = this.fb.group({
       category: ['All'],
@@ -43,7 +46,7 @@ export class InventoryComponent implements OnInit {
         panelClass: ['info-notification'], // Apply custom CSS class for styling
       }
     );
-    this.productService.getProducts().subscribe((data: any[]) => {
+    this.productService.getInventory(this.authService.getUserId()).subscribe((data: any[]) => {
       this.products = data;
       this.filteredProducts = [...this.products];
       this.categories = this.getUniqueCategories(this.products);

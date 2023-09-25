@@ -16,14 +16,20 @@ export class ViewOrdersService {
    */
   api = environment.apiURL + '/api/'
 
-  // Get all products
-  getOrders(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.api}` + "orders").pipe(
+  // Get all orders
+  getOrders(userId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.api}getOrders/${userId}`).pipe(
       catchError(this.handleError));
   }
 
   getOrderById(orderId: string): Observable<any> {
     const url = `${this.api}orders/${orderId}`;
+    return this.http.get<any>(url).pipe(
+      catchError(this.handleError));
+  }
+
+  getOrderBySeller(userId: string): Observable<any> {
+    const url = `${this.api}sellerOrders/${userId}`;
     return this.http.get<any>(url).pipe(
       catchError(this.handleError));
   }

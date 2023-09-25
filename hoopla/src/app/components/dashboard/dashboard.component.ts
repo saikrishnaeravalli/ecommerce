@@ -13,12 +13,17 @@ export class DashboardComponent implements OnInit {
   
   userType: String;
   selectedCategory: string | null;
+  activeSection: string = 'seller-dashboard';
 
   ngOnInit() {
     this.userType = this.authService.getUserRole();
     this.categoryService.selectedCategory$.subscribe((category) => {
       this.selectedCategory = category;
     });
+  }
+
+  setActiveSection(section: string): void {
+    this.activeSection = section;
   }
 }
 

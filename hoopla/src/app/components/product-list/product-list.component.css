@@ -1,39 +1,30 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; Distribute cards evenly with space in between */
-  }
-  
-  .product-card {
-    flex: 1;
-    min-width: calc(30% - 16px); /* Minimum card width with spacing */
-    max-width: calc(33.33vh - 16px); /* Maximum card width with spacing */
-    box-sizing: border-box;
-    margin: auto; /* Adjust the margin between rows */
-    margin-top: 16px;
-  }
-  
-  .product-image img {
-    max-width: 100%; /* Ensure the image width fits inside the card */
-  }
-  
-  .product-name {
-    text-align: center; /* Center-align the product name */
-  }
-  
-  /* Add any other custom styles as needed */
-  
-  
-  /* Add any other custom styles as needed */
-  
-  
-  mat-card-content {
-    flex-grow: 1;
-  }
-  
-  mat-card-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 16px 0;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  flex-basis: 1;
+  width: calc(33.33% - 16px); /* Approximately 3 cards in a row with spacing */
+  box-sizing: border-box;
+  margin: 0 8px 16px; /* Adjust the margin between rows */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image img.fixed-image-size {
+  width: 100%; /* Set fixed width for the image */
+  height: 150px; /* Set fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.text-center {
+  text-align: center; /* Center-align the product name */
+}
+
+.button-container {
+  margin-top: auto; /* Align buttons to the bottom */
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+}

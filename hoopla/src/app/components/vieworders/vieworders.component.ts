@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AuthService } from "src/app/helpers/auth.service";
 import { ViewOrdersService } from "src/app/services/view-orders.service";
 
 @Component({
@@ -9,10 +10,10 @@ import { ViewOrdersService } from "src/app/services/view-orders.service";
 export class ViewordersComponent implements OnInit {
   orders: any[] = [];
 
-  constructor(private service: ViewOrdersService) { }
+  constructor(private service: ViewOrdersService,private authService:AuthService) { }
 
   ngOnInit(): void {
-    this.service.getOrders().subscribe(
+    this.service.getOrders(this.authService.getUserId()).subscribe(
       (data) => {
         this.orders = data;
       },

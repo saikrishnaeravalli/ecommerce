@@ -62,6 +62,12 @@ export class ProductService {
     );
   }
 
+  // Get all products
+  getInventory(userID: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/inventory/${userID}`).pipe(
+      catchError(this.handleError));;;
+  }
+
   // Delete a product by ID
   deleteProduct(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/products/${id}`).pipe(
