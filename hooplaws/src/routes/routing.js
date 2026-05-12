@@ -133,7 +133,7 @@ router.post('/products', upload.array('images'), async (req, res, next) => {
 
 
 // Read all products with optional category filter
-router.get('/products', (req, res) => {
+router.get('/products', (req, res, next) => {
   // Check if a category filter is provided in the query parameters
   const category = req.query.category || null;
 
@@ -145,12 +145,12 @@ router.get('/products', (req, res) => {
       res.status(200).json(products);
     })
     .catch((err) => {
-      res.status(500).json({ err: 'Error fetching products' });
+      next(err);
     });
 });
 
 // Read products by seller ID
-router.get('/inventory/:userId', (req, res) => {
+router.get('/inventory/:userId', (req, res, next) => {
   const userId = req.params.userId;
 
   Product.find({ seller: userId })
@@ -161,15 +161,12 @@ router.get('/inventory/:userId', (req, res) => {
       res.status(200).json(products);
     })
     .catch((error) => {
-      if (error instanceof mongoose.CastError) {
-        return res.status(400).json({ error: 'Invalid user ID' });
-      }
-      res.status(500).json({ error: 'Error fetching the products' });
+      next(error);
     });
 });
 
 // Route to get an image by ID
-router.get('/images/:imageId', async (req, res) => {
+router.get('/images/:imageId', async (req, res, next) => {
   try {
     // Find the image by ID in the database
     const image = await Image.findById(req.params.imageId);
@@ -183,13 +180,12 @@ router.get('/images/:imageId', async (req, res) => {
     // Set the content-type and send the image
     res.type('image/jpeg').send(imgBuffer);
   } catch (err) {
-    console.error(err);
-    res.status(500).send('Internal Server Error');
+    next(err);
   }
 });
 
 // Read a single product by ID
-router.get('/products/:id', (req, res) => {
+router.get('/products/:id', (req, res, next) => {
   const productId = req.params.id;
 
   Product.findById(productId)
@@ -200,15 +196,12 @@ router.get('/products/:id', (req, res) => {
       res.status(200).json(product);
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
-        return res.status(400).json({ error: 'Invalid product ID' });
-      }
-      res.status(500).json({ error: 'Error fetching the product' });
+      next(error);
     });
 });
 
 // Edit an existing product
-router.put('/products/:id', (req, res) => {
+router.put('/products/:id', (req, res, next) => {
   const { name, description, price, stock, category, images } = req.body;
   const productId = req.params.id;
 
@@ -274,7 +267,7 @@ router.delete('/products/:id', (req, res, next) => {
 });
 
 // Route to update the stock of a product by ID
-router.put('/updateStock/:productId', async (req, res) => {
+router.put('/updateStock/:productId', async (req, res, next) => {
   try {
     const productId = req.params.productId;
     const newStockQuantity = req.body.stock; // Assuming the new stock quantity is sent in the request body
@@ -293,13 +286,12 @@ router.put('/updateStock/:productId', async (req, res) => {
     // Return the updated product as a response
     res.status(200).json(updatedProduct);
   } catch (error) {
-    console.error('Error updating stock:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    next(error);
   }
 });
 
 // Create a new cart item or update the quantity if it already exists
-router.post('/addToCart', (req, res) => {
+router.post('/addToCart', (req, res, next) => {
   const { userId, productId } = req.body;
 
   // Check if the item already exists in the user's cart
@@ -324,19 +316,18 @@ router.post('/addToCart', (req, res) => {
             res.status(201).json(savedCartItem);
           })
           .catch((err) => {
-            res.status(500).json({ error: 'Error creating cart item' });
+            next(err);
           });
       }
     })
     .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Error checking cart items' });
+      next(error);
     });
 });
 
 
 // Get the cart items for a user
-router.get('/cart/:userId', (req, res) => {
+router.get('/cart/:userId', (req, res, next) => {
   const userId = req.params.userId
 
   Cart.find({ userId })
@@ -345,13 +336,12 @@ router.get('/cart/:userId', (req, res) => {
       res.status(200).json(cartItems);
     })
     .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Error fetching cart items' });
+      next(error);
     });
 });
 
 // Update a cart item
-router.put('/cart/:cartItemId', (req, res) => {
+router.put('/cart/:cartItemId', (req, res, next) => {
   const cartItemId = req.params.cartItemId;
   const { quantity } = req.body;
 
@@ -360,13 +350,12 @@ router.put('/cart/:cartItemId', (req, res) => {
       res.status(200).json({ success: true });
     })
     .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Error updating cart item' });
+      next(error);
     });
 });
 
 // Delete a cart item
-router.delete('/cart/:cartItemId', (req, res) => {
+router.delete('/cart/:cartItemId', (req, res, next) => {
   const cartItemId = req.params.cartItemId;
 
   Cart.findByIdAndRemove(cartItemId)
@@ -374,13 +363,12 @@ router.delete('/cart/:cartItemId', (req, res) => {
       res.status(200).json({ success: true });
     })
     .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Error deleting cart item' });
+      next(error);
     });
 });
 
 // Create a new order
-router.post('/addOrder', (req, res) => {
+router.post('/addOrder', (req, res, next) => {
   // Generate a new order ID (You can use your logic here)
   generateOrderID()
     .then((orderID) => {
@@ -400,26 +388,25 @@ router.post('/addOrder', (req, res) => {
       res.status(201).json(savedOrder);
     })
     .catch((error) => {
-      res.status(500).json({ error: error.message });
+      next(error);
     });
 });
 
 // Retrieve all orders
-router.get('/getOrders/:userId', (req, res) => {
+router.get('/getOrders/:userId', (req, res, next) => {
   const userId = req.params.userId
   Order.find({ userId })
     .sort({ orderDate: -1 }) // Sort by most recent orderDate
     .then((orders) => {
-      console.log(orders)
       res.status(200).json(orders);
     })
     .catch((error) => {
-      res.status(500).json({ error: error.message });
+      next(error);
     });
 });
 
 // Retrieve a specific order by orderId
-router.get('/orders/:orderId', (req, res) => {
+router.get('/orders/:orderId', (req, res, next) => {
   const orderId = req.params.orderId;
 
   Order.findOne({ orderID: orderId }) // Use findOne instead of find to get a single order
@@ -433,20 +420,19 @@ router.get('/orders/:orderId', (req, res) => {
       }
     })
     .catch((error) => {
-      res.status(500).json({ error: error.message });
+      next(error);
     });
 });
 
 // Route to clear the cart for a specific user
-router.delete('/clearCart/:userId', (req, res) => {
+router.delete('/clearCart/:userId', (req, res, next) => {
   const userId = req.params.userId;
   Cart.deleteMany({ userId: userId })
     .then(() => {
       res.status(200).json({ success: true, message: 'Cart cleared successfully' });
     })
     .catch((error) => {
-      console.error('Error clearing cart:', error);
-      res.status(500).json({ success: false, message: 'Error clearing cart' });
+      next(error);
     });
 });
 
@@ -469,7 +455,7 @@ function generateOrderID() {
 }
 
 // Get user profile by ID
-router.get('/users/:userId', async (req, res) => {
+router.get('/users/:userId', async (req, res, next) => {
   const userId = req.params.userId;
 
   try {
@@ -481,12 +467,12 @@ router.get('/users/:userId', async (req, res) => {
     // Return user profile
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    next(error);
   }
 });
 
 // Update user profile by ID
-router.put('/users/:userId', async (req, res) => {
+router.put('/users/:userId', async (req, res, next) => {
   const userId = req.params.userId;
   const updatedProfile = req.body; // Assuming the request body contains updated profile data
 
@@ -499,12 +485,12 @@ router.put('/users/:userId', async (req, res) => {
     // Return updated user profile
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    next(error);
   }
 });
 
 // Define a route to fetch orders by seller's user ID
-router.get('/sellerOrders/:userId', (req, res) => {
+router.get('/sellerOrders/:userId', (req, res, next) => {
   const userId = req.params.userId;
 
   // Find orders where the seller's user ID matches the provided user ID
@@ -515,7 +501,6 @@ router.get('/sellerOrders/:userId', (req, res) => {
       select: 'name seller', // Select only the necessary product fields
     })
     .then((orders) => {
-      console.log(orders)
       // Filter orders to include only items with matching sellers
       const filteredOrders = orders.map((order) => {
         const filteredItems = order.items.filter((item) => item.productId && item.productId.seller.equals(userId));
@@ -533,7 +518,7 @@ router.get('/sellerOrders/:userId', (req, res) => {
       res.status(200).json(filteredOrders);
     })
     .catch((error) => {
-      res.status(500).json({ error: error.message });
+      next(error);
     });
 });
 

@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const passport = require('passport');
+const requestLogger = require('./utilities/RequestLogger');
+const { errorLogger, errorHandler } = require('./utilities/ErrorLogger');
 
 let envpath = './environments/.env';
 
@@ -35,6 +37,9 @@ app.use(express.urlencoded({ extended: true }));
 // Allows our Angular application to make HTTP requests to Express application
 app.use(cors());
 
+// Log all incoming requests
+app.use(requestLogger);
+
 // Where Angular builds to - In the ./angular/angular.json file, you will find this configuration
 // at the property: projects.angular.architect.build.options.outputPath
 // When you run `ng build`, the output will go to the ./public directory
@@ -50,6 +55,15 @@ app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'ui/index.html'))
 })
 
+/**
+ * -------------- ERROR HANDLING ----------------
+ */
+
+// Log errors to file
+app.use(errorLogger);
+
+// Send error response to client
+app.use(errorHandler);
 
 /**
  * -------------- SERVER ----------------
